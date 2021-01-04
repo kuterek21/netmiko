@@ -1,0 +1,24 @@
+no ip domain-look
+line con 0
+no exec-time
+vtp mode transp
+vlan 2
+name data
+vlan 10
+name voice
+vlan 15
+name data_center
+vlan 25
+name GAMES
+vlan 35
+name Factory
+vlan 45
+name OFFICES
+vlan 50
+name Factory_machinery
+vlan 60
+name VLan_for_Video
+vlan 65
+name Contractors
+!
+username mariusz priv 15 pass cisco
