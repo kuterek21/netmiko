@@ -2,6 +2,7 @@ no ip domain-look
 line con 0
 no exec-time
 vtp mode transp
+
 vlan 2
 name data
 vlan 10
@@ -21,4 +22,4 @@ name VLan_for_Video
 vlan 65
 name Contractors
 !
-username mariusz priv 15 pass cisco
+clock timezone local 0 0
