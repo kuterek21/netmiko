@@ -1,0 +1,21 @@
+from netmiko import ConnectHandler
+
+with open("iplist") as f:
+    list = f.read().splitlines()
+
+with open("list_of_commands") as f:
+    conf = f.read().splitlines()
+
+
+
+for dev in list:
+    print("Connecting to: "+dev)
+    ip_list = dev
+    sw = {"device_type":"cisco_ios",
+          "ip":ip_list,
+          "username":"admin",
+          "password":"cisco"
+    }
+    net = ConnectHandler(**sw)
+    output = net.send_config_set(conf)
+    print(output)
