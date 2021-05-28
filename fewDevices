@@ -1,0 +1,19 @@
+from netmiko import Netmiko
+
+dev1 = {"ip" : "192.168.0.102",
+        "device_type" : "cisco_ios",
+        "username" : "admin",
+        "password" : "cisco"}
+
+dev2 = {"ip" : "192.168.0.103",
+        "device_type" : "cisco_ios",
+        "username" : "admin",
+        "password" : "cisco"}
+
+devices = [dev1,dev2]
+for dev in devices:
+        net_connect = Netmiko(**dev)
+
+        output = net_connect.send_command("sh ip int brie | e una")
+        print(output)
+
