@@ -1,0 +1,10 @@
+1st method
+with open("ip_add") as LIST
+    for n in LIST:
+        print(n)
+        
+        
+2nd method -----------------
+LIST = open("ip_add")
+for n in LIST:
+    print(n)
